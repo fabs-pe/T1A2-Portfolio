@@ -1,0 +1,86 @@
+@import "../defaults/color";
+@import "../index";
+
+main{
+    padding-bottom: 100px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: space-around;
+    justify-content: center;
+
+    section{
+        @include div-background();
+        
+        
+        .blog-title{ //center page title
+            display: flex;
+            align-content: center;
+            justify-content: center;
+    
+            h1{ 
+                @include font();
+                align-content: center;
+                justify-content: center;
+
+                font-size: 18px;
+                overflow: hidden;
+                white-space: nowrap;
+                animation: change-width 3.7s; // animation
+                animation-iteration-count: 1; //set the times the animation loops
+    
+            }
+            @keyframes change-width{
+                0%{
+                    width: 0;
+                }
+                100%{
+                    width: 100%;
+                }
+            }
+            
+        }
+
+            .blog-image{ 
+                display: flex; //poistion the image
+                align-content: center;
+                justify-content: center;
+            }
+               
+                img{
+                padding-top: 24px;
+                height: 200px;
+            }
+
+            .blog-text{
+                display: flex;
+
+                p{
+                @include font(); //calls font mixin
+                align-content: center;
+                justify-content: center;
+                padding-right: 50px;
+                padding-left: 50px;
+
+
+                }
+            }
+
+        
+    }
+}
+
+
+@media screen and (min-width: $medium){
+    main{
+ 
+        section{
+            width:65%;
+            .blog-title{
+                h1{
+                    font-size: 24px;
+                }
+            }
+        }
+    }
+}

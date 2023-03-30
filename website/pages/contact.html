@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fabian Perre</title>
+    <link rel="icon" type="image/x-icon" href="../images/logo.PNG"> <!--page tab image-->
+    <!-- css link -->
+    <link rel="stylesheet" href="../styles/pages/contact.css" />
+
+    <!-- font awesome link -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+        integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+        crossorigin="anonymous"
+        referrerpolicy="no-referrer" />
+    
+    <!-- goggle fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans&family=Rubik+Iso&family=Source+Code+Pro&display=swap" rel="stylesheet">
+    
+
+</head>
+<body>
+    <header>
+        <div class="logo-name">
+            <a href="../index.html">    <!--link to home page-->
+                <img src="../images/logo.png" alt="Fabian Perre Logo" />
+            </a>
+            <p class="name">
+                <span class="title-text">Personal Portfolio</span>
+            </p>
+        </div>
+        <nav class="nav-items">
+            <ul>
+                <li><a href="../pages/about.html">About</a> </li>
+                <li class="dropdown"> <!--dropdown for blog list-->
+                    <a href="../pages/blogs.html" class="dropbtn">Blogs</a>
+                    <div class="dropdown-content">
+                        <a href="../pages/cssblog.html">CSS</a>
+                        <a href="../pages/htmlblog.html">HTML</a>
+                        <a href="../pages/phpblog.html">PHP</a>
+                        <a href="../pages/sqlblog.html">SQL</a>
+                        <a href="../pages/javablog.html">JAVASCRIPT</a>
+                    </div>
+                </li>
+                <li><a href="../pages/contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <hr> <!--add line under header -->
+    <main>
+
+        <div class="page-title">
+            <h1>Ask Us A Question!</h1>
+        </div>
+            <section>
+                <div class="logos">
+                    <img src="../images/language-logos.jpg" alt ="programming code logos">
+                </div>
+                <form>
+                    <div class="form-info">
+                        <label>First Name:</label>
+                        <input class="form-input" />
+                    </div>
+                    <div class="form-info">
+                        <label>Last Name:</label>
+                        <input class ="form-input" />
+                    </div>
+                    <div class="form-info">
+                        <label>Email:</label>
+                        <input class ="form-input" />
+                    </div>
+                    <div class="form-check"> <!--checkbox-->
+                        <p>I am interested in:</p>
+                        <input type="checkbox" class="form-input">
+                        <label>HTML</label><br>
+                        <input type="checkbox" class="form-input">
+                        <label for="css">CSS</label><br>
+                        <input type="checkbox" class="form-input">
+                        <label for="php">PHP</label><br>
+                        <input type="checkbox" class="form-input">
+                        <label for="sql">SQL</label><br>
+                        <input type="checkbox" class="form-input">
+                        <label for="java">JAVASCRIPT</label><br>
+                    </div>
+                    <div class="form-info">
+                        <label>Message: </label>
+                        <textarea 
+                            rows="5"
+                            class="form-input form-textarea"></textarea>
+
+                    <div class="btn">
+                        <button id="submit" class="sub-btn">Submit</button> <!--button to submit form-->
+                    </div>
+
+                </form>
+            </section>
+    </main>
+    <footer>
+        <div class="social-media">
+            <a href="https://github.com/fabs-pe?tab=repositories" target="_blank"> <!--open in new tab-->
+                <i class="fa-brands fa-github"></i>
+            </a>
+            <a href="https://www.linkedin.com" target="_blank"> <!--open in new tab-->
+                <i class="fa-brands fa-linkedin"></i>
+            </a>
+            <a href="https://www.instagram.com" target="_blank"> <!--open in new tab-->
+                <i class="fa-brands fa-instagram"></i>
+            </a>
+        </div>
+        <div class="contact-info">
+            <p>PH: 0404 000 000</p>
+            <p>Email: 14333@coderacademy.edu.au</p>
+            <p><a href="./contact.html">Get In Touch</a></p> <!-- link to contact page-->
+            <p>&copy; Copyright 2023 Fabian Perre</p>
+        </div>
+        
+    </footer>
+</body>
+</html>

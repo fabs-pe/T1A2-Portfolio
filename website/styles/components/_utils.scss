@@ -1,0 +1,17 @@
+@mixin background-styles() {
+    background-color: $primary-background;
+    padding: 16px;
+    text-align: center;
+}
+
+
+    
+@mixin font(){
+    font-family: 'Josefin Sans', sans-serif;
+    font-family: 'Rubik Iso', cursive;
+    font-family: 'Source Code Pro', monospace;
+}
+
+@mixin div-background(){
+    background-color: rgba(217, 217, 217, 0.3);
+}

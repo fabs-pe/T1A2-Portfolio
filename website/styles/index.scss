@@ -1,0 +1,14 @@
+@import "./defaults/color";
+@import "./components/header";
+@import "./components/footer";
+
+body {
+    margin: 0;
+    background-color: #A0C0AD;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 100vh;
+}
+ 
+//body styling and imports pages to one

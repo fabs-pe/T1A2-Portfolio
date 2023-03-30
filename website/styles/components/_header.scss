@@ -1,0 +1,117 @@
+@import "../defaults/color";
+@import "./utils";
+@import "../defaults/breakpoint";
+
+header {
+    @include background-styles();
+
+    .logo-name{
+        padding-left: 30px;
+        padding-top: 30px;
+    }
+
+
+        .name {
+            font-size: 28px;
+
+        }
+
+        .nav-items  {
+            @include font();
+            
+    
+            ul {
+                list-style-type: none;
+                margin: 0;
+                padding: 0;
+                overflow: hidden;
+                width: 100%;
+                display: flex;
+                justify-content: space-around;
+                font-size: 24px;
+        
+              }
+              
+    
+              
+              li a, .dropbtn { //nav bar dropdown
+                @include font();
+                display: inline-block;  
+                color:black;
+                text-align: center;
+                padding: 14px 16px;
+                text-decoration: none;
+              }
+              
+              li a:hover, .dropdown:hover .dropbtn {  //nav bar dropdown formatting
+                    font-weight: bold; 
+                    color: $primary-color;
+              }
+              
+              li.dropdown {
+                display: inline-block;
+              }
+              
+              .dropdown-content {
+                display: none;
+                position: absolute;
+                background-color: $primary-background;
+                min-width: 160px;
+                box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+                z-index: 1;
+              }
+              
+              .dropdown-content a {
+                color: black;
+                padding: 12px 16px;
+                text-decoration: none;
+                display: block;
+                text-align: left;
+              }
+              
+              .dropdown-content a:hover {
+                    background-color:black;
+                }
+              
+              .dropdown:hover .dropdown-content {
+                display: block;
+              }
+        }
+    }
+
+
+    hr{ //format line under header elements
+        color: $secondary-color;
+        height: 5px;
+        width: 98%;
+
+    }
+
+@media screen and (min-width: $medium) {
+    header {
+        display: flex;
+        align-items: flex-end; //moves nav bar to the right of screen on larger screens
+        justify-content: space-between;
+        
+
+
+
+            .name {
+                font-size: 28px;
+                margin-bottom: 0;
+            
+            }
+
+            .nav-items{
+                padding-right: 80px;
+            }
+ 
+    
+
+        hr{
+            color: $secondary-color;
+            height: 5px;
+    
+         }   
+}
+}

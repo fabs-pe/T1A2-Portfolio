@@ -1,0 +1,102 @@
+@import "../defaults/color";
+@import "../index";
+
+main{
+    padding-bottom: 100px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: space-around;
+    justify-content: center;
+
+    .blog-title{
+        display: flex;
+        align-content: center;
+        justify-content: center;
+
+        h1{
+            @include font();
+            font-size: 28px;
+        }
+    }
+    section{
+        width: 95%;
+
+
+  
+
+        a{
+            @include font();
+            text-decoration: none;
+            color: black;
+        }
+        a:hover{
+            font-weight: bold;
+            color: $primary-color;
+        }
+        .blog-odd{ // two div types to float images opposite sides of div
+            @include div-background();
+
+            height:auto;
+            padding-left: 12px;
+            padding-right: 12px;
+            padding-bottom: 16px;
+            
+            h2{
+                align-content: center;
+                justify-content: center;  
+            }
+            p{
+                img{
+                    float: right; //put with image within the div on the right
+                    height: 100px;
+            
+                 }
+            }
+        }   
+
+
+        .blog-even{
+            @include div-background();
+
+            height:auto;
+            padding-left: 12px;
+            padding-right: 12px;
+            padding-bottom: 16px;
+            
+
+            p{
+                img{
+                    float: left; //put with image within the div on the left
+                    height: 100px;
+            
+                 }
+            }
+        }  
+    }
+ 
+}   
+    @media screen and (min-width: 950px) { //breaks at a bigger screen size due to format
+        section{
+            display: flex;
+            flex-direction: row; // divs side by side
+        
+
+                a{
+                    margin-right: 16px;
+        
+                }
+
+                .blog-even{
+                    width:auto; 
+                }
+                .blog-odd{
+                    width:auto; 
+                    p{
+                        img{
+                            float: clear;
+                        }
+                    }
+                }
+        }
+    }

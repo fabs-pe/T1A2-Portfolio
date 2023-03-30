@@ -1,0 +1,82 @@
+@import "../index";  //imports other scss files
+
+main {
+    
+    
+    section {
+        .face-image {  //sets flex for the div
+                display: flex;
+                align-content: center;
+                justify-content: center;
+              img{              
+                border-radius: 50%;
+                padding-top: 24px;
+                height: 200px;
+              }                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   
+            
+        }
+        .type-div{
+            display: flex;
+            align-content: center;
+            justify-content: center;
+        }
+
+        #typing{
+            overflow: hidden;
+            white-space: nowrap;
+            animation: change-width 3.8s; //time for animation
+            animation-iteration-count: 1; // amount of times anumation is looped
+
+        }
+        @keyframes change-width{
+            0%{
+                width: 0;
+            }
+            100%{
+                width: 100%;
+            }
+        }
+
+        p{
+            @include font(); // calls mixin
+            font-size: 20px;
+            display: flex;
+            align-content: center;
+            justify-content: center;
+
+
+
+            a {
+                @include font();
+                text-decoration: none;
+                color: $primary-color;
+            
+                &:hover{
+                    color:black;
+                    font-size: 28px;
+                    font-weight: bold;
+                }
+            }
+        }
+
+
+        
+    }
+}
+
+    @media screen and (min-width: 600px) { // changes some formating at 600px screen size
+        main{
+            section{
+                .face-image{
+                    img{
+                        height:350px; //main image increases
+                    }
+
+                }
+                p{
+                    font-size: 24px; //increase in font size
+                }
+            }
+        }
+        
+    }

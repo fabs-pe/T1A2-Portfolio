@@ -1,0 +1,53 @@
+@import "../defaults/color";
+@import "./utils";
+@import "../defaults/breakpoint";
+
+footer {
+    @include background-styles();
+    background-color: black; //set backgrounf color of footer
+    left: 0;
+    bottom: 0; //places footer at bottom of page
+
+    
+
+    .social-media {
+        display: flex;
+        justify-content: space-around; //space out logos
+        margin-bottom: 24px;
+
+        a {
+            i {
+                color: $secondary-color;
+                font-size: 24px;
+            }
+        }
+
+    }
+
+    .contact-info{
+    p{
+        color: $secondary-color;
+        }
+    a {
+        text-decoration: none;
+        color: $primary-color;
+        font-family: 'Josefin Sans', sans-serif;
+        font-family: 'Rubik Iso', cursive;
+        font-family: 'Source Code Pro', monospace;
+         }
+    a:hover{
+        color: $primary-color;
+        font-weight: bold;
+        }
+}
+}
+
+@media screen and (min-width: 600px) {
+    footer {
+        .social-media {
+            width: 50%;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }
+}
