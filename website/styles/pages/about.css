@@ -176,9 +176,42 @@ main section .about-text p {
   padding-right: 50px;
   padding-left: 50px;
 }
+main section .btn {
+  display: flex;
+  flex-direction: column;
+  align-content: space-around;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: center;
+}
+main section .btn p {
+  font-family: "Josefin Sans", sans-serif;
+  font-family: "Rubik Iso", cursive;
+  font-family: "Source Code Pro", monospace;
+  display: flex;
+}
+main section .btn .resume-btn {
+  font-family: "Josefin Sans", sans-serif;
+  font-family: "Rubik Iso", cursive;
+  font-family: "Source Code Pro", monospace;
+  height: 50px;
+  width: 30%;
+  background-color: black;
+  color: #D9D9D9;
+  border: none;
+  margin-bottom: 24px;
+}
+main section .btn .resume-btn:hover {
+  color: black;
+  background-color: #ECFCF2;
+  box-shadow: 0 12px 16px 0 #D9D9D9, 0 17px 50px 0 rgba(0, 0, 0, 0.19);
+}
 
 @media screen and (min-width: 600px) {
   main section {
     width: 65%;
+  }
+  main section .btn .resume-btn {
+    width: 200px;
   }
 }/*# sourceMappingURL=about.css.map */

@@ -144,7 +144,7 @@ main section .face-image {
 main section .face-image img {
   border-radius: 50%;
   padding-top: 24px;
-  height: 200px;
+  height: 180px;
 }
 main section .type-div {
   display: flex;
@@ -169,7 +169,6 @@ main section p {
   font-family: "Josefin Sans", sans-serif;
   font-family: "Rubik Iso", cursive;
   font-family: "Source Code Pro", monospace;
-  font-size: 20px;
   display: flex;
   align-content: center;
   justify-content: center;

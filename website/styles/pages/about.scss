@@ -47,7 +47,36 @@ main{ // set styling for main div
 
                 }
             }
+            .btn{
+                display: flex;
+                flex-direction: column;
+                align-content: space-around;
+                justify-content: center;
+                flex-wrap: wrap;
+                align-items: center;
 
+                p{
+                    @include font();
+                    display: flex;
+                }
+
+                .resume-btn{
+                    @include font();
+                    height:50px;
+                    width:30%;
+                    background-color: black;
+                    color: $primary-color;
+                    border: none;
+                    margin-bottom: 24px;
+
+                }
+                    .resume-btn:hover{
+                        color: black;
+                        background-color: $secondary-color;
+                        box-shadow: 0 12px 16px 0 $primary-color, 0 17px 50px 0 rgba(0,0,0,0.19);
+                    }
+            
+            }
         
     }
 }
@@ -57,6 +86,12 @@ main{ // set styling for main div
     main{
         section{
             width:65%; //adjust div width for larger screens
+            .btn{
+                .resume-btn{
+                    width:200px;
+                }
+            }
         }
+
     }
 }
