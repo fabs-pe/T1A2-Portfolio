@@ -3,8 +3,8 @@
 @import "../defaults/breakpoint";
 
 footer {
-    @include background-styles();
-    background-color: black; //set backgrounf color of footer
+    @include footer-styles();
+    background-color: black; //set background color of footer
     left: 0;
     bottom: 0; //places footer at bottom of page
 
@@ -14,6 +14,7 @@ footer {
         display: flex;
         justify-content: space-around; //space out logos
         margin-bottom: 24px;
+        animation: drop-in 1s ease 200ms backwards;
 
         a {
             i {

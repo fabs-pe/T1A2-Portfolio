@@ -7,6 +7,17 @@ header .logo-name {
   padding-left: 30px;
   padding-top: 30px;
 }
+header .logo-name img {
+  animation: rotation 1.8s linear; /* rotates logo */
+}
+@keyframes rotation { /* rotates logo */
+  from {
+    transform: rotate(0deg); /* start */
+  }
+  to {
+    transform: rotate(359deg); /* end */
+  }
+}
 header .name {
   font-size: 28px;
 }
@@ -14,15 +25,16 @@ header .nav-items {
   font-family: "Josefin Sans", sans-serif;
   font-family: "Rubik Iso", cursive;
   font-family: "Source Code Pro", monospace;
+  animation: drop-in 1s ease 200ms backwards; /* drop in of navbar*/
 }
 header .nav-items ul {
-  list-style-type: none;
+  list-style-type: none; /* gets rid of bullet points*/
   margin: 0;
   padding: 0;
   overflow: hidden;
   width: 100%;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-around; /*flex space around elements*/
   font-size: 24px;
 }
 header .nav-items li a, header .nav-items .dropbtn {
@@ -30,14 +42,14 @@ header .nav-items li a, header .nav-items .dropbtn {
   font-family: "Rubik Iso", cursive;
   font-family: "Source Code Pro", monospace;
   display: inline-block;
-  color: black;
+  color: black; /* set color*/
   text-align: center;
   padding: 14px 16px;
-  text-decoration: none;
+  text-decoration: none; /*deletes default <a> formatting*/
 }
 header .nav-items li a:hover, header .nav-items .dropdown:hover .dropbtn {
   font-weight: bold;
-  color: #D9D9D9;
+  color: #D9D9D9; /* chaanges color on hover*/
 }
 header .nav-items li.dropdown {
   display: inline-block;
@@ -58,19 +70,29 @@ header .nav-items .dropdown-content a {
   text-align: left;
 }
 header .nav-items .dropdown-content a:hover {
-  background-color: black;
+  background-color: black; /*changes color on hover*/
 }
 header .nav-items .dropdown:hover .dropdown-content {
   display: block;
 }
 
-hr {
+hr { /*line under header*/
   color: #ECFCF2;
   height: 5px;
   width: 98%;
 }
 
-@media screen and (min-width: 600px) {
+@keyframes drop-in { /*drop-in animation*/
+  from {
+    opacity: 0;
+    transform: translateY(-100px);
+  }
+  to {
+    opacity: 1;
+    transform: translate(0px);
+  }
+}
+@media screen and (min-width: 600px) { /*breakpoint*/
   header {
     display: flex;
     align-items: flex-end;
@@ -89,10 +111,9 @@ hr {
   }
 }
 footer {
-  background-color: #A0C0AD;
   padding: 16px;
   text-align: center;
-  background-color: black;
+  background-color: black; /*sets footer background to black*/
   left: 0;
   bottom: 0;
 }
@@ -100,6 +121,7 @@ footer .social-media {
   display: flex;
   justify-content: space-around;
   margin-bottom: 24px;
+  animation: drop-in 1s ease 200ms backwards; /* social logos drop in*/
 }
 footer .social-media a i {
   color: #ECFCF2;
@@ -116,11 +138,11 @@ footer .contact-info a {
   font-family: "Source Code Pro", monospace;
 }
 footer .contact-info a:hover {
-  color: #D9D9D9;
+  color: #D9D9D9; /*changes color on :hover*/
   font-weight: bold;
 }
 
-@media screen and (min-width: 600px) {
+@media screen and (min-width: 600px) { /*breakpoint*/
   footer .social-media {
     width: 50%;
     margin-left: auto;

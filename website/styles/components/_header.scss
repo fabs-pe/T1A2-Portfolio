@@ -8,6 +8,18 @@ header {
     .logo-name{
         padding-left: 30px;
         padding-top: 30px;
+
+        img{
+          animation: rotation 1.8s  linear;
+        }
+        @keyframes rotation {
+          from {
+            transform: rotate(0deg);
+          }
+          to {
+            transform: rotate(359deg);
+          }
+        }
     }
 
 
@@ -18,6 +30,7 @@ header {
 
         .nav-items  {
             @include font();
+            animation: drop-in 1s ease 200ms backwards;
             
     
             ul {
@@ -86,6 +99,17 @@ header {
         width: 98%;
 
     }
+
+    @keyframes drop-in {
+      from {
+       opacity: 0;
+       transform: translateY(-100px);
+      }
+      to {
+       opacity: 1;
+       transform: translate(0px);
+      }
+     }
 
 @media screen and (min-width: $medium) {
     header {

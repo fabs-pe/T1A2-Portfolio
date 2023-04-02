@@ -7,6 +7,17 @@ header .logo-name {
   padding-left: 30px;
   padding-top: 30px;
 }
+header .logo-name img {
+  animation: rotation 1.8s linear; /*rotate logo with keyframe on load*/
+}
+@keyframes rotation { /* rotates logo */
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359deg);
+  }
+}
 header .name {
   font-size: 28px;
 }
@@ -14,6 +25,7 @@ header .nav-items {
   font-family: "Josefin Sans", sans-serif;
   font-family: "Rubik Iso", cursive;
   font-family: "Source Code Pro", monospace;
+  animation: drop-in 1s ease 200ms backwards; /**/
 }
 header .nav-items ul {
   list-style-type: none;
@@ -36,8 +48,8 @@ header .nav-items li a, header .nav-items .dropbtn {
   text-decoration: none;
 }
 header .nav-items li a:hover, header .nav-items .dropdown:hover .dropbtn {
-  font-weight: bold;
-  color: #D9D9D9;
+  font-weight: bold; /* makes font bold on :hover*/
+  color: #D9D9D9;  /* changes color on :hover*/
 }
 header .nav-items li.dropdown {
   display: inline-block;
@@ -53,7 +65,7 @@ header .nav-items .dropdown-content {
 header .nav-items .dropdown-content a {
   color: black;
   padding: 12px 16px;
-  text-decoration: none;
+  text-decoration: none; /* deletes default underline*/
   display: block;
   text-align: left;
 }
@@ -64,13 +76,23 @@ header .nav-items .dropdown:hover .dropdown-content {
   display: block;
 }
 
-hr {
+hr { /* line under header*/
   color: #ECFCF2;
   height: 5px;
   width: 98%;
 }
 
-@media screen and (min-width: 600px) {
+@keyframes drop-in { /* drop-in keyframe for navbar*/
+  from {
+    opacity: 0;
+    transform: translateY(-100px);
+  }
+  to {
+    opacity: 1;
+    transform: translate(0px);
+  }
+}
+@media screen and (min-width: 600px) { /* breakpoint*/
   header {
     display: flex;
     align-items: flex-end;
@@ -89,7 +111,6 @@ hr {
   }
 }
 footer {
-  background-color: #A0C0AD;
   padding: 16px;
   text-align: center;
   background-color: black;
@@ -100,6 +121,7 @@ footer .social-media {
   display: flex;
   justify-content: space-around;
   margin-bottom: 24px;
+  animation: drop-in 1s ease 200ms backwards; /*drop in of social logos*/
 }
 footer .social-media a i {
   color: #ECFCF2;
@@ -120,7 +142,7 @@ footer .contact-info a:hover {
   font-weight: bold;
 }
 
-@media screen and (min-width: 600px) {
+@media screen and (min-width: 600px) { /* breakpoint*/
   footer .social-media {
     width: 50%;
     margin-left: auto;
@@ -145,6 +167,15 @@ main section .face-image img {
   border-radius: 50%;
   padding-top: 24px;
   height: 180px;
+  animation: fadeIn 8s; /* fade in of page image*/
+}
+@keyframes fadeIn { /*fade-in keyframe for image*/
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 main section .type-div {
   display: flex;
@@ -154,10 +185,10 @@ main section .type-div {
 main section #typing {
   overflow: hidden;
   white-space: nowrap;
-  animation: change-width 3.8s;
-  animation-iteration-count: 1;
+  animation: change-width 3.8s; /* set how long animation runs*/
+  animation-iteration-count: 1; /*sets amount of times keyframe runs*/
 }
-@keyframes change-width {
+@keyframes change-width { /*typing animation*/
   0% {
     width: 0;
   }
@@ -187,10 +218,10 @@ main section p a:hover {
 }
 
 @media screen and (min-width: 600px) {
-  main section .face-image img {
+  main section .face-image img { /* increases image size on larger screens*/
     height: 350px;
   }
-  main section p {
+  main section p { /* increase font size on larger screen*/
     font-size: 24px;
   }
 }/*# sourceMappingURL=home.css.map */

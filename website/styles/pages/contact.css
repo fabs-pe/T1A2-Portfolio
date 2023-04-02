@@ -1,11 +1,22 @@
 header {
-  background-color: #A0C0AD;
+  background-color: #A0C0AD; /* header background color*/
   padding: 16px;
   text-align: center;
 }
 header .logo-name {
   padding-left: 30px;
   padding-top: 30px;
+}
+header .logo-name img {
+  animation: rotation 1.8s linear; /* rotation of logo*/
+}
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359deg);
+  }
 }
 header .name {
   font-size: 28px;
@@ -14,6 +25,7 @@ header .nav-items {
   font-family: "Josefin Sans", sans-serif;
   font-family: "Rubik Iso", cursive;
   font-family: "Source Code Pro", monospace;
+  animation: drop-in 1s ease 200ms backwards; /* drop in animation of navbar*/
 }
 header .nav-items ul {
   list-style-type: none;
@@ -47,7 +59,7 @@ header .nav-items .dropdown-content {
   position: absolute;
   background-color: #A0C0AD;
   min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);  
   z-index: 1;
 }
 header .nav-items .dropdown-content a {
@@ -64,13 +76,23 @@ header .nav-items .dropdown:hover .dropdown-content {
   display: block;
 }
 
-hr {
+hr { /* line under header*/
   color: #ECFCF2;
   height: 5px;
   width: 98%;
 }
 
-@media screen and (min-width: 600px) {
+@keyframes drop-in { /* drop in keyframe*/
+  from {
+    opacity: 0;
+    transform: translateY(-100px);
+  }
+  to {
+    opacity: 1;
+    transform: translate(0px);
+  }
+}
+@media screen and (min-width: 600px) { /* breakpoint*/
   header {
     display: flex;
     align-items: flex-end;
@@ -89,7 +111,6 @@ hr {
   }
 }
 footer {
-  background-color: #A0C0AD;
   padding: 16px;
   text-align: center;
   background-color: black;
@@ -100,6 +121,7 @@ footer .social-media {
   display: flex;
   justify-content: space-around;
   margin-bottom: 24px;
+  animation: drop-in 1s ease 200ms backwards; /* drop in animation*/
 }
 footer .social-media a i {
   color: #ECFCF2;
@@ -120,7 +142,7 @@ footer .contact-info a:hover {
   font-weight: bold;
 }
 
-@media screen and (min-width: 600px) {
+@media screen and (min-width: 600px) { /*breakpoint*/
   footer .social-media {
     width: 50%;
     margin-left: auto;
@@ -153,7 +175,7 @@ main section {
   justify-content: center;
   margin-top: 24px;
 }
-main section .logos {
+main section .logos { /* hides logo div on screens under 600px*/
   display: none;
 }
 main section form {
@@ -172,18 +194,18 @@ main section form .form-info label {
 }
 main section form .form-info .form-input {
   border: 1px solid #ECFCF2;
-  border-radius: 5px;
+  border-radius: 5px; /*rounds corners of input boxes*/
   outline: none;
   font-size: 1.2rem;
 }
 main section form .form-info .form-input:not(.form-textarea) {
-  height: 32px;
+  height: 32px; /*input box height*/
 }
 main section form .form-info .form-input.form-textarea {
   resize: none;
 }
 main section form .form-info .form-input:focus {
-  box-shadow: 0 0 8px 6px #ECFCF2;
+  box-shadow: 0 0 8px 6px #ECFCF2; 
 }
 main section form .form-info .btn {
   display: flex;
@@ -205,15 +227,26 @@ main section form .form-info .btn .sub-btn:hover {
 main section form .form-check {
   font-size: 1.2rem;
 }
-@media screen and (min-width: 600px) {
+@media screen and (min-width: 600px) { /*breakpoint*/
   main section {
-    flex-direction: row;
+    flex-direction: row; /* changes flex to row instead of coloum*/
     justify-content: space-around;
   }
   main section .logos {
-    display: contents;
+    display: contents; /* displays logo div on screens larger then 600px*/
   }
   main section .logos img {
-    height: 300px;
+    height: 300px; /* set image height*/
+    animation: drop-in 1s ease 200ms backwards; /* animation of image*/
+  }
+  @keyframes drop-in {
+    from {
+      opacity: 0;
+      transform: translateY(-100px);
+    }
+    to {
+      opacity: 1;
+      transform: translate(0px);
+    }
   }
 }/*# sourceMappingURL=contact.css.map */

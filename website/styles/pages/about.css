@@ -7,6 +7,17 @@ header .logo-name {
   padding-left: 30px;
   padding-top: 30px;
 }
+header .logo-name img {
+  animation: rotation 1.8s linear; /*logo rotation*/
+}
+@keyframes rotation { /* keyframe to set animation*/
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359deg);
+  }
+}
 header .name {
   font-size: 28px;
 }
@@ -14,12 +25,13 @@ header .nav-items {
   font-family: "Josefin Sans", sans-serif;
   font-family: "Rubik Iso", cursive;
   font-family: "Source Code Pro", monospace;
+  animation: drop-in 1s ease 200ms backwards; /*drop in of navbar*/
 }
 header .nav-items ul {
   list-style-type: none;
   margin: 0;
   padding: 0;
-  overflow: hidden;
+  overflow: hidden; 
   width: 100%;
   display: flex;
   justify-content: space-around;
@@ -33,7 +45,7 @@ header .nav-items li a, header .nav-items .dropbtn {
   color: black;
   text-align: center;
   padding: 14px 16px;
-  text-decoration: none;
+  text-decoration: none; /* deletes default decoration*/
 }
 header .nav-items li a:hover, header .nav-items .dropdown:hover .dropbtn {
   font-weight: bold;
@@ -64,16 +76,26 @@ header .nav-items .dropdown:hover .dropdown-content {
   display: block;
 }
 
-hr {
+hr { /*line under header*/
   color: #ECFCF2;
   height: 5px;
   width: 98%;
 }
 
-@media screen and (min-width: 600px) {
+@keyframes drop-in { /* keyframe for drop in of navbar and some images*/
+  from {
+    opacity: 0;
+    transform: translateY(-100px);
+  }
+  to {
+    opacity: 1;
+    transform: translate(0px);
+  }
+}
+@media screen and (min-width: 600px) { /* breakpoint*/
   header {
     display: flex;
-    align-items: flex-end;
+    align-items: flex-end; /* moves navbar to the right of the screen*/
     justify-content: space-between;
   }
   header .name {
@@ -83,13 +105,12 @@ hr {
   header .nav-items {
     padding-right: 80px;
   }
-  header hr {
+  header hr { /* line under header*/
     color: #ECFCF2;
     height: 5px;
   }
 }
 footer {
-  background-color: #A0C0AD;
   padding: 16px;
   text-align: center;
   background-color: black;
@@ -100,6 +121,7 @@ footer .social-media {
   display: flex;
   justify-content: space-around;
   margin-bottom: 24px;
+  animation: drop-in 1s ease 200ms backwards; /* drop in of  social logos*/
 }
 footer .social-media a i {
   color: #ECFCF2;
@@ -178,7 +200,7 @@ main section .about-text p {
 }
 main section .btn {
   display: flex;
-  flex-direction: column;
+  flex-direction: column; /*stacks buttons*/
   align-content: space-around;
   justify-content: center;
   flex-wrap: wrap;
@@ -194,24 +216,24 @@ main section .btn .resume-btn {
   font-family: "Josefin Sans", sans-serif;
   font-family: "Rubik Iso", cursive;
   font-family: "Source Code Pro", monospace;
-  height: 50px;
-  width: 30%;
+  height: 50px; /* sets height of btn*/
+  width: 30%; /* sets width of btn*/
   background-color: black;
   color: #D9D9D9;
-  border: none;
+  border: none; /* delets default border of btn*/
   margin-bottom: 24px;
 }
 main section .btn .resume-btn:hover {
   color: black;
   background-color: #ECFCF2;
-  box-shadow: 0 12px 16px 0 #D9D9D9, 0 17px 50px 0 rgba(0, 0, 0, 0.19);
+  box-shadow: 0 12px 16px 0 #D9D9D9, 0 17px 50px 0 rgba(0, 0, 0, 0.19); /* creates shadow on hover */
 }
 
-@media screen and (min-width: 600px) {
+@media screen and (min-width: 600px) { /* breakpoint*/
   main section {
     width: 65%;
   }
   main section .btn .resume-btn {
-    width: 200px;
+    width: 200px; /* sets width of btn on different screen size*/
   }
 }/*# sourceMappingURL=about.css.map */

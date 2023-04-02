@@ -4,6 +4,11 @@
     text-align: center;
 }
 
+@mixin footer-styles() {
+    padding: 16px;
+    text-align: center;
+}
+
 
     
 @mixin font(){

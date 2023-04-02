@@ -7,6 +7,17 @@ header .logo-name {
   padding-left: 30px;
   padding-top: 30px;
 }
+header .logo-name img {
+  animation: rotation 1.8s linear;
+}
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359deg);
+  }
+}
 header .name {
   font-size: 28px;
 }
@@ -14,6 +25,7 @@ header .nav-items {
   font-family: "Josefin Sans", sans-serif;
   font-family: "Rubik Iso", cursive;
   font-family: "Source Code Pro", monospace;
+  animation: drop-in 1s ease 200ms backwards;
 }
 header .nav-items ul {
   list-style-type: none;
@@ -64,13 +76,23 @@ header .nav-items .dropdown:hover .dropdown-content {
   display: block;
 }
 
-hr {
+hr { /* line under header*/
   color: #ECFCF2;
   height: 5px;
   width: 98%;
 }
 
-@media screen and (min-width: 600px) {
+@keyframes drop-in {
+  from {
+    opacity: 0;
+    transform: translateY(-100px);
+  }
+  to {
+    opacity: 1;
+    transform: translate(0px);
+  }
+}
+@media screen and (min-width: 600px) { /*breakpoint*/
   header {
     display: flex;
     align-items: flex-end;
@@ -89,7 +111,6 @@ hr {
   }
 }
 footer {
-  background-color: #A0C0AD;
   padding: 16px;
   text-align: center;
   background-color: black;
@@ -100,6 +121,7 @@ footer .social-media {
   display: flex;
   justify-content: space-around;
   margin-bottom: 24px;
+  animation: drop-in 1s ease 200ms backwards;
 }
 footer .social-media a i {
   color: #ECFCF2;
@@ -181,7 +203,7 @@ main section .blog-odd h2 {
   justify-content: center;
 }
 main section .blog-odd p img {
-  float: right;
+  float: right; /* floats image to th right*/
   height: 100px;
 }
 main section .blog-even {
@@ -192,14 +214,14 @@ main section .blog-even {
   padding-bottom: 16px;
 }
 main section .blog-even p img {
-  float: left;
+  float: left; /* floats image to the left*/
   height: 100px;
 }
 
-@media screen and (min-width: 950px) {
+@media screen and (min-width: 950px) { /*larger screen breakpoint*/
   section {
     display: flex;
-    flex-direction: row;
+    flex-direction: row; /* changes flex from coloum to row*/
   }
   section a {
     margin-right: 16px;
