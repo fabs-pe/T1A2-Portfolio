@@ -1,5 +1,5 @@
 header {
-  background-color: #A0C0AD;
+  background-color: #b2b7b5;
   padding: 16px;
   text-align: center;
 }
@@ -8,7 +8,7 @@ header .logo-name {
   padding-top: 30px;
 }
 header .logo-name img {
-  animation: rotation 1.8s linear;
+  animation: fadeIn 8s;
 }
 @keyframes rotation {
   from {
@@ -49,7 +49,7 @@ header .nav-items li a, header .nav-items .dropbtn {
 }
 header .nav-items li a:hover, header .nav-items .dropdown:hover .dropbtn {
   font-weight: bold;
-  color: #D9D9D9;
+  color: #1BB99F;
 }
 header .nav-items li.dropdown {
   display: inline-block;
@@ -57,7 +57,7 @@ header .nav-items li.dropdown {
 header .nav-items .dropdown-content {
   display: none;
   position: absolute;
-  background-color: #A0C0AD;
+  background-color: #b2b7b5;
   min-width: 160px;
   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
   z-index: 1;
@@ -77,7 +77,7 @@ header .nav-items .dropdown:hover .dropdown-content {
 }
 
 hr {
-  color: #ECFCF2;
+  color: #1BB99F;
   height: 5px;
   width: 98%;
 }
@@ -110,18 +110,18 @@ hr {
     height: 5px;
   }
 }
-footer { 
+footer {
   padding: 16px;
   text-align: center;
   background-color: black;
   left: 0;
-  bottom: 0; /* places at bottom of page */
+  bottom: 0;
 }
 footer .social-media {
   display: flex;
-  justify-content: space-around; /* space out logos */
+  justify-content: space-around;
   margin-bottom: 24px;
-  animation: drop-in 1s ease 200ms backwards; /* animation for social logos */
+  animation: drop-in 1s ease 200ms backwards;
 }
 footer .social-media a i {
   color: #ECFCF2;
@@ -132,17 +132,17 @@ footer .contact-info p {
 }
 footer .contact-info a {
   text-decoration: none;
-  color: #D9D9D9;
+  color: #c5cac8;
   font-family: "Josefin Sans", sans-serif;
   font-family: "Rubik Iso", cursive;
   font-family: "Source Code Pro", monospace;
 }
 footer .contact-info a:hover {
-  color: #D9D9D9;
+  color: #c5cac8;
   font-weight: bold;
 }
 
-@media screen and (min-width: 600px) { /* breakpoint */
+@media screen and (min-width: 600px) {
   footer .social-media {
     width: 50%;
     margin-left: auto;
@@ -151,7 +151,7 @@ footer .contact-info a:hover {
 }
 body {
   margin: 0;
-  background-color: #A0C0AD;
+  background-color: #b2b7b5;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -174,7 +174,7 @@ main section .blog-title {
   align-content: center;
   justify-content: center;
 }
-main section .blog-title h1 { /* set h1 in the blog title */
+main section .blog-title h1 {
   font-family: "Josefin Sans", sans-serif;
   font-family: "Rubik Iso", cursive;
   font-family: "Source Code Pro", monospace;
@@ -186,7 +186,7 @@ main section .blog-title h1 { /* set h1 in the blog title */
   animation: change-width 3.7s;
   animation-iteration-count: 1;
 }
-@keyframes change-width { /* typing effect */
+@keyframes change-width {
   0% {
     width: 0;
   }
@@ -216,7 +216,7 @@ main section .blog-text p {
   padding-left: 50px;
 }
 
-@media screen and (min-width: 600px) { /* breakpoint */
+@media screen and (min-width: 600px) {
   main section {
     width: 65%;
   }

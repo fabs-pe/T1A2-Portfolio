@@ -10,7 +10,7 @@ header {
         padding-top: 30px;
 
         img{
-          animation: rotation 1.8s  linear;
+          animation: fadeIn 8s; 
         }
         @keyframes rotation {
           from {
@@ -58,7 +58,7 @@ header {
               
               li a:hover, .dropdown:hover .dropbtn {  //nav bar dropdown formatting
                     font-weight: bold; 
-                    color: $primary-color;
+                    color: $third-color;
               }
               
               li.dropdown {
@@ -94,7 +94,7 @@ header {
 
 
     hr{ //format line under header elements
-        color: $secondary-color;
+        color: $third-color;
         height: 5px;
         width: 98%;
 

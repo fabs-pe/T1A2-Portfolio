@@ -32,7 +32,7 @@ main{
         }
         a:hover{
             font-weight: bold;
-            color: $primary-color;
+            color: $third-color;
         }
         .blog-odd{ // two div types to float images opposite sides of div
             @include div-background();

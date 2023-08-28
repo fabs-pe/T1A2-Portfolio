@@ -1,5 +1,5 @@
 header {
-  background-color: #A0C0AD;
+  background-color: #b2b7b5;
   padding: 16px;
   text-align: center;
 }
@@ -8,14 +8,14 @@ header .logo-name {
   padding-top: 30px;
 }
 header .logo-name img {
-  animation: rotation 1.8s linear; /* rotates logo */
+  animation: fadeIn 8s;
 }
-@keyframes rotation { /* rotates logo */
+@keyframes rotation {
   from {
-    transform: rotate(0deg); /* start */
+    transform: rotate(0deg);
   }
   to {
-    transform: rotate(359deg); /* end */
+    transform: rotate(359deg);
   }
 }
 header .name {
@@ -25,16 +25,16 @@ header .nav-items {
   font-family: "Josefin Sans", sans-serif;
   font-family: "Rubik Iso", cursive;
   font-family: "Source Code Pro", monospace;
-  animation: drop-in 1s ease 200ms backwards; /* drop in of navbar*/
+  animation: drop-in 1s ease 200ms backwards;
 }
 header .nav-items ul {
-  list-style-type: none; /* gets rid of bullet points*/
+  list-style-type: none;
   margin: 0;
   padding: 0;
   overflow: hidden;
   width: 100%;
   display: flex;
-  justify-content: space-around; /*flex space around elements*/
+  justify-content: space-around;
   font-size: 24px;
 }
 header .nav-items li a, header .nav-items .dropbtn {
@@ -42,14 +42,14 @@ header .nav-items li a, header .nav-items .dropbtn {
   font-family: "Rubik Iso", cursive;
   font-family: "Source Code Pro", monospace;
   display: inline-block;
-  color: black; /* set color*/
+  color: black;
   text-align: center;
   padding: 14px 16px;
-  text-decoration: none; /*deletes default <a> formatting*/
+  text-decoration: none;
 }
 header .nav-items li a:hover, header .nav-items .dropdown:hover .dropbtn {
   font-weight: bold;
-  color: #D9D9D9; /* chaanges color on hover*/
+  color: #1BB99F;
 }
 header .nav-items li.dropdown {
   display: inline-block;
@@ -57,7 +57,7 @@ header .nav-items li.dropdown {
 header .nav-items .dropdown-content {
   display: none;
   position: absolute;
-  background-color: #A0C0AD;
+  background-color: #b2b7b5;
   min-width: 160px;
   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
   z-index: 1;
@@ -70,19 +70,19 @@ header .nav-items .dropdown-content a {
   text-align: left;
 }
 header .nav-items .dropdown-content a:hover {
-  background-color: black; /*changes color on hover*/
+  background-color: black;
 }
 header .nav-items .dropdown:hover .dropdown-content {
   display: block;
 }
 
-hr { /*line under header*/
-  color: #ECFCF2;
+hr {
+  color: #1BB99F;
   height: 5px;
   width: 98%;
 }
 
-@keyframes drop-in { /*drop-in animation*/
+@keyframes drop-in {
   from {
     opacity: 0;
     transform: translateY(-100px);
@@ -92,7 +92,7 @@ hr { /*line under header*/
     transform: translate(0px);
   }
 }
-@media screen and (min-width: 600px) { /*breakpoint*/
+@media screen and (min-width: 600px) {
   header {
     display: flex;
     align-items: flex-end;
@@ -113,7 +113,7 @@ hr { /*line under header*/
 footer {
   padding: 16px;
   text-align: center;
-  background-color: black; /*sets footer background to black*/
+  background-color: black;
   left: 0;
   bottom: 0;
 }
@@ -121,7 +121,7 @@ footer .social-media {
   display: flex;
   justify-content: space-around;
   margin-bottom: 24px;
-  animation: drop-in 1s ease 200ms backwards; /* social logos drop in*/
+  animation: drop-in 1s ease 200ms backwards;
 }
 footer .social-media a i {
   color: #ECFCF2;
@@ -132,17 +132,17 @@ footer .contact-info p {
 }
 footer .contact-info a {
   text-decoration: none;
-  color: #D9D9D9;
+  color: #c5cac8;
   font-family: "Josefin Sans", sans-serif;
   font-family: "Rubik Iso", cursive;
   font-family: "Source Code Pro", monospace;
 }
 footer .contact-info a:hover {
-  color: #D9D9D9; /*changes color on :hover*/
+  color: #c5cac8;
   font-weight: bold;
 }
 
-@media screen and (min-width: 600px) { /*breakpoint*/
+@media screen and (min-width: 600px) {
   footer .social-media {
     width: 50%;
     margin-left: auto;
@@ -151,7 +151,7 @@ footer .contact-info a:hover {
 }
 body {
   margin: 0;
-  background-color: #A0C0AD;
+  background-color: #b2b7b5;
   display: flex;
   flex-direction: column;
   justify-content: space-between;

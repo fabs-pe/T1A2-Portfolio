@@ -4,11 +4,12 @@
 
 body {
     margin: 0;
-    background-color: #A0C0AD;
+    background-color: $primary-background;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     min-height: 100vh;
 }
+
  
 //body styling and imports pages to one

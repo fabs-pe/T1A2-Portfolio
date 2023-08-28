@@ -1,5 +1,5 @@
 header {
-  background-color: #A0C0AD; /* header background color*/
+  background-color: #b2b7b5;
   padding: 16px;
   text-align: center;
 }
@@ -8,7 +8,7 @@ header .logo-name {
   padding-top: 30px;
 }
 header .logo-name img {
-  animation: rotation 1.8s linear; /* rotation of logo*/
+  animation: fadeIn 8s;
 }
 @keyframes rotation {
   from {
@@ -25,7 +25,7 @@ header .nav-items {
   font-family: "Josefin Sans", sans-serif;
   font-family: "Rubik Iso", cursive;
   font-family: "Source Code Pro", monospace;
-  animation: drop-in 1s ease 200ms backwards; /* drop in animation of navbar*/
+  animation: drop-in 1s ease 200ms backwards;
 }
 header .nav-items ul {
   list-style-type: none;
@@ -49,7 +49,7 @@ header .nav-items li a, header .nav-items .dropbtn {
 }
 header .nav-items li a:hover, header .nav-items .dropdown:hover .dropbtn {
   font-weight: bold;
-  color: #D9D9D9;
+  color: #1BB99F;
 }
 header .nav-items li.dropdown {
   display: inline-block;
@@ -57,9 +57,9 @@ header .nav-items li.dropdown {
 header .nav-items .dropdown-content {
   display: none;
   position: absolute;
-  background-color: #A0C0AD;
+  background-color: #b2b7b5;
   min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);  
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
   z-index: 1;
 }
 header .nav-items .dropdown-content a {
@@ -76,13 +76,13 @@ header .nav-items .dropdown:hover .dropdown-content {
   display: block;
 }
 
-hr { /* line under header*/
-  color: #ECFCF2;
+hr {
+  color: #1BB99F;
   height: 5px;
   width: 98%;
 }
 
-@keyframes drop-in { /* drop in keyframe*/
+@keyframes drop-in {
   from {
     opacity: 0;
     transform: translateY(-100px);
@@ -92,7 +92,7 @@ hr { /* line under header*/
     transform: translate(0px);
   }
 }
-@media screen and (min-width: 600px) { /* breakpoint*/
+@media screen and (min-width: 600px) {
   header {
     display: flex;
     align-items: flex-end;
@@ -121,7 +121,7 @@ footer .social-media {
   display: flex;
   justify-content: space-around;
   margin-bottom: 24px;
-  animation: drop-in 1s ease 200ms backwards; /* drop in animation*/
+  animation: drop-in 1s ease 200ms backwards;
 }
 footer .social-media a i {
   color: #ECFCF2;
@@ -132,17 +132,17 @@ footer .contact-info p {
 }
 footer .contact-info a {
   text-decoration: none;
-  color: #D9D9D9;
+  color: #c5cac8;
   font-family: "Josefin Sans", sans-serif;
   font-family: "Rubik Iso", cursive;
   font-family: "Source Code Pro", monospace;
 }
 footer .contact-info a:hover {
-  color: #D9D9D9;
+  color: #c5cac8;
   font-weight: bold;
 }
 
-@media screen and (min-width: 600px) { /*breakpoint*/
+@media screen and (min-width: 600px) {
   footer .social-media {
     width: 50%;
     margin-left: auto;
@@ -151,7 +151,7 @@ footer .contact-info a:hover {
 }
 body {
   margin: 0;
-  background-color: #A0C0AD;
+  background-color: #b2b7b5;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -175,7 +175,7 @@ main section {
   justify-content: center;
   margin-top: 24px;
 }
-main section .logos { /* hides logo div on screens under 600px*/
+main section .logos {
   display: none;
 }
 main section form {
@@ -194,18 +194,18 @@ main section form .form-info label {
 }
 main section form .form-info .form-input {
   border: 1px solid #ECFCF2;
-  border-radius: 5px; /*rounds corners of input boxes*/
+  border-radius: 5px;
   outline: none;
   font-size: 1.2rem;
 }
 main section form .form-info .form-input:not(.form-textarea) {
-  height: 32px; /*input box height*/
+  height: 32px;
 }
 main section form .form-info .form-input.form-textarea {
   resize: none;
 }
 main section form .form-info .form-input:focus {
-  box-shadow: 0 0 8px 6px #ECFCF2; 
+  box-shadow: 0 0 8px 6px #ECFCF2;
 }
 main section form .form-info .btn {
   display: flex;
@@ -217,27 +217,27 @@ main section form .form-info .btn .sub-btn {
   font-family: "Source Code Pro", monospace;
   margin-top: 24px;
   height: 50px;
-  background-color: #D9D9D9;
+  background-color: #c5cac8;
   border: none;
 }
 main section form .form-info .btn .sub-btn:hover {
   background-color: #ECFCF2;
-  box-shadow: 0 12px 16px 0 #D9D9D9, 0 17px 50px 0 rgba(0, 0, 0, 0.19);
+  box-shadow: 0 12px 16px 0 #c5cac8, 0 17px 50px 0 rgba(0, 0, 0, 0.19);
 }
 main section form .form-check {
   font-size: 1.2rem;
 }
-@media screen and (min-width: 600px) { /*breakpoint*/
+@media screen and (min-width: 600px) {
   main section {
-    flex-direction: row; /* changes flex to row instead of coloum*/
+    flex-direction: row;
     justify-content: space-around;
   }
   main section .logos {
-    display: contents; /* displays logo div on screens larger then 600px*/
+    display: contents;
   }
   main section .logos img {
-    height: 300px; /* set image height*/
-    animation: drop-in 1s ease 200ms backwards; /* animation of image*/
+    height: 300px;
+    animation: drop-in 1s ease 200ms backwards;
   }
   @keyframes drop-in {
     from {
