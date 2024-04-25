@@ -3,14 +3,15 @@
 @import "../defaults/breakpoint";
 
 header {
-    @include background-styles();
+    // @include background-styles();
 
     .logo-name{
         padding-left: 30px;
         padding-top: 30px;
 
         img{
-          animation: fadeIn 8s; 
+          animation: fadeIn 8s;
+    
         }
         @keyframes rotation {
           from {
