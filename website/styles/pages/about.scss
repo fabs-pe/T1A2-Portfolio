@@ -9,8 +9,8 @@ main{ // set styling for main div
     justify-content: center;
 
     section{
-        @include div-background(); //calls mixin for div
-        width: 80%;
+        // @include div-background(); //calls mixin for div
+        // width: 80%;
         
         .about-title{ //center page title
             display: flex;

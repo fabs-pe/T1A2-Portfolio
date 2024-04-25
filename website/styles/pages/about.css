@@ -152,7 +152,7 @@ body {
   min-height: 100vh;
   background: linear-gradient(-45deg, #C3CBD6, #748B6F, #2A403D, #D05663);
   background-size: 400% 400%;
-  animation: gradient 15s ease infinite;
+  animation: gradient 25s ease infinite;
   height: 100vh;
 }
 
@@ -173,10 +173,6 @@ main {
   flex-wrap: wrap;
   align-content: space-around;
   justify-content: center;
-}
-main section {
-  background-color: rgba(217, 217, 217, 0.3);
-  width: 80%;
 }
 main section .about-title {
   display: flex;
